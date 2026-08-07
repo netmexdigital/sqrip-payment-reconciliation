@@ -90,7 +90,8 @@ money and the shop will blame sqrip. Verify each one:
 ## 4. API surface (v2)
 
 The authoritative, runnable contract is the **Postman collection "sqrip Auskunftsdienst
-API"**. Summary:
+API"** — [browse the published docs](https://documenter.getpostman.com/view/57091140/2sBY4VLd8x)
+(read online or fork into your own workspace). Summary:
 
 ### 4.1 Register — `POST /v2/register`
 ```json
@@ -202,10 +203,15 @@ worked example next to this guide.
 
 ## 8. Getting access
 
-To build a client you need only two things from sqrip:
+The **Postman collection** (the exact request/response shapes) is public:
+[published docs](https://documenter.getpostman.com/view/57091140/2sBY4VLd8x) — read online or
+fork it into your own workspace.
+
+From sqrip you then need:
 
 - the **API base URL**, and
-- the **Postman collection** (the exact request/response shapes).
+- a **sqrip account with credits** — its API token is your `sqrip_token`, and credits are what
+  the service charges per delivered match (that is the access gate).
 
 Get both by contacting [sqrip.ch](https://sqrip.ch). The service (parsing, mailboxes, bank
 coverage, billing) stays operated by sqrip — you integrate against it, you don't run it.
