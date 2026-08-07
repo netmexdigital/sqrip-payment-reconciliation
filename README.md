@@ -211,5 +211,17 @@ you up with a client token and the collection.
 
 ---
 
+## 9. License
+
+- **Documentation** in this repository (this guide) — [CC BY 4.0](LICENSE): use and adapt
+  freely, with attribution to netmex digital gmbh / sqrip.
+- **Code and examples** added to this repository — [MIT](LICENSE-CODE).
+
+© 2026 netmex digital gmbh. "sqrip" is a product of netmex digital gmbh. The reference
+client (`class-sqrip-avis.php`) lives in the WooCommerce plugin and is GPL — that license
+governs that file in its own repository.
+
+---
+
 *Questions or corrections? Open an issue. This guide is a work in progress and will grow
 with reference clients and SDKs.*
