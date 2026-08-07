@@ -203,28 +203,22 @@ worked example next to this guide.
 
 ## 8. Getting access
 
-The **Postman collection** (the exact request/response shapes) is public:
-[published docs](https://documenter.getpostman.com/view/57091140/2sBY4VLd8x) — read online or
-fork it into your own workspace.
-
-From sqrip you then need:
-
-- the **API base URL**, and
-- a **sqrip account with credits** — its API token is your `sqrip_token`, and credits are what
-  the service charges per delivered match (that is the access gate).
-
-Get both by contacting [sqrip.ch](https://sqrip.ch). The service (parsing, mailboxes, bank
-coverage, billing) stays operated by sqrip — you integrate against it, you don't run it.
+Everything you need is public — the **Postman collection** carries the API base URL and the
+exact request/response shapes:
+[published docs](https://documenter.getpostman.com/view/57091140/2sBY4VLd8x) (read online or
+fork it into your own workspace). The service (parsing, mailboxes, bank coverage, billing)
+stays operated by sqrip — you integrate against it, you don't run it. For a partnership or
+questions, reach out via [sqrip.ch](https://sqrip.ch).
 
 **sqrip issues no integration-specific key.** Two credentials are in play, and neither is
 handed out per integrator:
 
-- The **sqrip API key** — each shop's own key from its **sqrip.ch account** (with credits),
-  the same key it already uses for QR bills. Your client passes it as `sqrip_token`
-  (Section 4.1); the service uses it to gate access and to bill the shop's account. Access
-  is therefore gated by "the shop has a funded sqrip account", not by a key sqrip gives you.
-- The **callback token** (`token`) — a secret **your client generates itself**, once per
-  shop, and reuses to authenticate the nudge callback and the claim. sqrip does not issue it.
+- **sqrip API key** — each shop's own key from its **sqrip.ch account (with credits)**, the
+  same key it already uses for QR bills. Your client passes it as `sqrip_token` (Section 4.1);
+  the service uses it both to gate access and to bill the shop per delivered match. Access is
+  therefore gated by "the shop has a funded sqrip account", not by a key sqrip gives you.
+- **callback token** (`token`) — a secret **your client generates itself**, once per shop, and
+  reuses to authenticate the nudge callback and the claim. sqrip does not issue it.
 
 ---
 
