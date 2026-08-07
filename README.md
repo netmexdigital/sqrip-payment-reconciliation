@@ -202,12 +202,23 @@ worked example next to this guide.
 
 ## 8. Getting access
 
-To build a client you need: the API base URL, a client token (your shared secret), and the
-Postman collection for the exact request/response shapes. The service (parsing, mailboxes,
-bank coverage, billing) stays operated by sqrip — you integrate against it, you don't run it.
+To build a client you need only two things from sqrip:
 
-Access is granted per partner. Get in touch via [sqrip.ch](https://sqrip.ch) and we'll set
-you up with a client token and the collection.
+- the **API base URL**, and
+- the **Postman collection** (the exact request/response shapes).
+
+Get both by contacting [sqrip.ch](https://sqrip.ch). The service (parsing, mailboxes, bank
+coverage, billing) stays operated by sqrip — you integrate against it, you don't run it.
+
+**sqrip issues no integration-specific key.** Two credentials are in play, and neither is
+handed out per integrator:
+
+- The **sqrip API key** — each shop's own key from its **sqrip.ch account** (with credits),
+  the same key it already uses for QR bills. Your client passes it as `sqrip_token`
+  (Section 4.1); the service uses it to gate access and to bill the shop's account. Access
+  is therefore gated by "the shop has a funded sqrip account", not by a key sqrip gives you.
+- The **callback token** (`token`) — a secret **your client generates itself**, once per
+  shop, and reuses to authenticate the nudge callback and the claim. sqrip does not issue it.
 
 ---
 
